@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <!-- <meta name="description" content="DESCRIPTION META TAG"> -->
+  <meta property="og:title" content="MaPO Project Page"/>
+  <!-- <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/> -->
+  <meta property="og:url" content="https://mapo-t2i.github.io/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/banner.png" />
+  <!-- <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/> -->
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>MaPO</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+</head>
+
+<body>
+  <section class="hero banner">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Margin-aware Preference Optimization for Aligning Diffusion Models without Reference</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://jiwooya1000.github.io/" target="_blank">Jiwoo Hong</a><sup>*†</sup>, </span>
+                <span class="author-block">
+                  <a href="https://sayak.dev/" target="_blank">Sayak Paul</a><sup>*‡</sup>, </span>
+                  <span class="author-block">
+                    <a href="https://nlee-208.github.io/" target="_blank">Noah Lee</a><sup>†</sup>, </span>
+                    <span class="author-block">
+                      <a href="https://github.com/kashif" target="_blank">Kashif Rasul</a><sup>‡</sup>, </span>
+                      <span class="author-block">
+                </span><br>
+                <span class="author-block">
+                  <a href="https://jamesthorne.com/" target="_blank">James Thorne</a><sup>†</sup>, </span>
+                  <span class="author-block">
+                    <a href="https://jh-jeong.github.io/" target="_blank">Jongheon Jeong</a><sup>§</sup></span>
+                    </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>†</sup>KAIST AI, </span>
+                    <span class="author-block"><sup>‡</sup>Huggingface, </span>
+                    <span class="author-block"><sup>§</sup>Korea University</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/mapo-t2i/mapo" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- HF Collections link -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/mapo-t2i" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <span class="icon">🤗</span>
+                    </span>
+                    <span>Collections</span>
+                  </a>
+                </span>
+
+
+                <!-- Model link -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/mapo-t2i" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <span class="icon">🤗</span>
+                  </span>
+                  <span>Model</span>
+                    </a>
+                </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Modern alignment techniques based on human preferences, such as RLHF and DPO, typically employ divergence regularization relative to the reference model to ensure training stability. However, this often limits the flexibility of models during alignment, especially when there is a clear distributional discrepancy between the preference data and the reference model. 
+            In this paper, we focus on the alignment of recent text-to-image diffusion models, such as Stable Diffusion XL (SDXL), and find that this ''<i>reference mismatch</i>'' is indeed a significant problem in aligning these models due to the unstructured nature of visual modalities: e.g., a preference for a particular stylistic aspect can easily induce such a discrepancy. Motivated by this observation, we propose a novel and memory-friendly preference alignment method for diffusion models that does not depend on any reference model, coined <u>margin-aware preference optimization</u> (<b>MaPO</b>). <b>MaPO</b> jointly maximizes the likelihood margin between the preferred and dispreferred image sets while maximizing the likelihood of the preferred image sets, simultaneously learning general stylistic features and preferences. For evaluation, we introduce two new pairwise preference datasets, which comprise self-generated image pairs from SDXL, Pick-Style and Pick-Safety, simulating diverse scenarios of reference mismatch due to style preference shift. Our experiments validate that <b>MaPO</b> can significantly improve alignment on Pick-Style and Pick-Safety, as well as general preference alignment via fine-tuning SDXL on Pick-a-Pic v2, surpassing the base SDXL and other existing methods. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+      <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+              <div class="card">
+                  <div class="card-image">
+                      <img src="static/images/examples/mapo_ex_1.png" alt="carousel1" />
+                  </div>
+                  <div class="card-content has-text-centered">
+                      A vibrant and detailed painting depicting an abundance of lush, pink peonies against a light background.
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-image">
+                      <img src="static/images/examples/mapo_ex_2.png" alt="carousel2" />
+                  </div>
+                  <div class="card-content has-text-centered">
+                    A cozy two-story house with a snow-covered roof and garage doors, surrounded by wintry landscaping.
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-image">
+                      <img src="static/images/examples/mapo_ex_3.png" alt="carousel3" />
+                  </div>
+                  <div class="card-content has-text-centered">
+                    Portrait photo of a girl, photograph, highly detailed face, depth of field, moody light, golden hour, style by Dan Winters, Russell James, Steve McCurry, centered, extremely detailed, Nikon D850, award winning photography.
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-image">
+                      <img src="static/images/examples/mapo_ex_4.png" alt="carousel4" />
+                  </div>
+                  <div class="card-content has-text-centered">
+                    A six-pence British silver coin from the year 1834, featuring a portrait of a man and a crown on its obverse and an ornamental wreath on its reverse.                    
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-image">
+                      <img src="static/images/examples/mapo_ex_5.png" alt="carousel5" />
+                  </div>
+                  <div class="card-content has-text-centered">
+                    A whimsical, fantastical landscape with rolling, candy-like hills and a bright, sunny sky with fluffy, white clouds. Extremely detailed, 8k.
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-image">
+                      <img src="static/images/examples/mapo_ex_6.png" alt="carousel6" />
+                  </div>
+                  <div class="card-content has-text-centered">
+                    An abstract heart-shaped chocolate object with a marbled pattern.
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-image">
+                      <img src="static/images/examples/mapo_ex_7.png" alt="carousel6" />
+                  </div>
+                  <div class="card-content has-text-centered">
+                    An abstract, colorful mural painting depicting a symbolic figure with long flowing hair against vibrant floral and organic background elements.
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-image">
+                      <img src="static/images/examples/mapo_ex_8.png" alt="carousel6" />
+                  </div>
+                  <div class="card-content has-text-centered">
+                    A painting depicting a tranquil tropical landscape with palm trees, moonlit skies and a couple of figures in the foreground.
+                  </div>
+              </div>
+              <div class="card">
+                <div class="card-image">
+                    <img src="static/images/examples/mapo_ex_9.jpg" alt="carousel6" />
+                </div>
+                <div class="card-content has-text-centered">
+                  A cute rabbit playing in the garden, Pixar style, extremely detailed, 8k.
+                </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                  <img src="static/images/examples/mapo_ex_10.jpg" alt="carousel6" />
+              </div>
+              <div class="card-content has-text-centered">
+                An abstract portrait consisting of bold, flowing brushstrokes against a neutral background.
+              </div>
+          </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+      <div class="container is-max-desktop">
+          <h2 class="title is-3">General Pipeline</h2>
+          <h2>
+            Reference model can impede preference optimization under distributional discrepancy (i.e., <i>reference mistmatch</i>) between the preference data and those represented by the reference model. We present margin-aware preference optimization (<b>MaPO</b>), to align text-to-image diffusion models without any reference. To demonstrate the effectiveness of MaPO, we self-curate offline preference data to simulate the two cases of reference mismatch: reference-chosen mismatch and reference-rejected mismatch.
+          </h2>
+          <br><div align="center"><img src="static/images/mapo_method.png" alt="general pipeline of mapo" width="875"/></div>
+      </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+      <div class="container is-max-desktop">
+          <h2 class="title is-3">Style-grounded Preference</h2>
+          <h2>
+            We make two splits of style-grounded preference dataset, cartoon and pixel art, by prepending <i>“Disney style animated image.”</i> and <i>“Pixel art style image.”</i>. Then, we prepend “Realistic 8k image.” to the context prompt for rejected images. Therefore, an ideally aligned model should generate the animated or pixel art images given the prompt, respectively. As stylistic prefixes make major changes in the chosen images, we intend to simulate the situation in which the reference model is distant from the chosen style.
+          </h2>
+          <br><div align="center"><img src="static/images/pick_style.png" alt="pick style figure" width="875"/></div>
+      </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+      <div class="container is-max-desktop">
+          <h2 class="title is-3">Safety-grounded Preference</h2>
+          <h2>
+            We prepend <i>“Sexual, nudity, +19 image.”</i> for the rejected images and nothing for the chosen, given the context prompts. Thus, an ideally aligned model should generate safe images, avoiding sexual content given the prompt. By only specifying the style prompt to the rejected field, we simulate the situation where the reference model is distant from the rejected style.
+          </h2>
+          <br><div align="center"><img src="static/images/pick_safety.png" alt="pick safety figure" width="875"/></div>
+      </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+      <div class="container is-max-desktop">
+          <h2 class="title is-3">General Preference</h2>
+          <h2>
+            We also test our method for mild reference mismatch situations. The training dataset, Pick-a-Pic v2, comprises 1M image pairs with corresponding prompts generated by the generative models, including the variants of SDXL. By having the samples from SDXL variants, we set Pick-a-Pic v2 as adataset to test the effectiveness of MaPO in situations where the reference mismatch is marginal.
+          </h2>
+          <br><div align="center"><img src="static/images/general.png" alt="pick style figure" width="875"/></div>
+      </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+      <div class="container is-max-desktop">
+          <h2 class="title is-3">Evaluation on imgsys</h2>
+          <h2>
+            We evaluate the MaPO checkpoint adapted on Pick-a-Pic v2 for general human preference alignment in the Imgsys public benchmark.
+            MaPO was abble to outperform or match 21 out of 25 state-of-the-art text-to-image diffusion models by ranking 7th on the leaderboard at the time of writing, compared to Diffusion-DPO’s 20th place, while also consuming 14.5% less wall-clock training time on adapting Pick-a-Pic v2.
+          </h2>
+          <br><div align="center"><img src="static/images/imgsys.png" alt="pick style figure" width="875"/></div>
+      </div>
+  </div>
+</section>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{todo,
+        title={Margin-aware Preference Optimization for Aligning Diffusion Models without Reference}, 
+        author={Jiwoo Hong and Sayak Paul and Noah Lee and Kashif Rasuland James Thorne and Jongheon Jeong},
+        year={2024},
+        eprint={todo},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV,cs.LG}
+    }</code></pre>
+    </div>
+  </section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using <a href="https://spright-t2i.github.io/" target="_blank">SPRIGHT T2I Project Page</a> which was adopted from the  <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+</html>
