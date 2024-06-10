@@ -10,8 +10,6 @@
   <meta property="og:url" content="https://mapo-t2i.github.io/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/banner.png" />
-  <!-- <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/> -->
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -81,46 +79,32 @@
                           <i class="fas fa-file-pdf"></i>
                         </span>
                         <span>Paper</span>
-                      </a>
-                    </span>
+                        </a>
+                      </span>
 
+                      <!-- HF Collections link -->
+                      <span class="link-block">
+                        <a href="https://huggingface.co/mapo-t2i" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <span class="icon">🤗</span>
+                        </span>
+                        <span>Models & Datasets</span>
+                        </a>
+                      </span>
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/mapo-t2i/mapo" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- HF Collections link -->
-                  <span class="link-block">
-                    <a href="https://huggingface.co/mapo-t2i" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <span class="icon">🤗</span>
-                    </span>
-                    <span>Collections</span>
-                  </a>
-                </span>
-
-
-                <!-- Model link -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/mapo-t2i" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <span class="icon">🤗</span>
-                  </span>
-                  <span>Model</span>
-                    </a>
-                </span>
+                      <!-- Github link -->
+                      <span class="link-block">
+                        <a href="https://github.com/mapo-t2i/mapo" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                        </a>
+                      </span>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -137,6 +121,9 @@
           <p>
             Modern alignment techniques based on human preferences, such as RLHF and DPO, typically employ divergence regularization relative to the reference model to ensure training stability. However, this often limits the flexibility of models during alignment, especially when there is a clear distributional discrepancy between the preference data and the reference model. 
             In this paper, we focus on the alignment of recent text-to-image diffusion models, such as Stable Diffusion XL (SDXL), and find that this ''<i>reference mismatch</i>'' is indeed a significant problem in aligning these models due to the unstructured nature of visual modalities: e.g., a preference for a particular stylistic aspect can easily induce such a discrepancy. Motivated by this observation, we propose a novel and memory-friendly preference alignment method for diffusion models that does not depend on any reference model, coined <u>margin-aware preference optimization</u> (<b>MaPO</b>). <b>MaPO</b> jointly maximizes the likelihood margin between the preferred and dispreferred image sets while maximizing the likelihood of the preferred image sets, simultaneously learning general stylistic features and preferences. For evaluation, we introduce two new pairwise preference datasets, which comprise self-generated image pairs from SDXL, Pick-Style and Pick-Safety, simulating diverse scenarios of reference mismatch due to style preference shift. Our experiments validate that <b>MaPO</b> can significantly improve alignment on Pick-Style and Pick-Safety, as well as general preference alignment via fine-tuning SDXL on Pick-a-Pic v2, surpassing the base SDXL and other existing methods. 
+          </p>
+          <p>
+            <b>Warning: This paper contains examples of harmful content, including explicit text and images.</b>
           </p>
         </div>
       </div>
@@ -293,6 +280,7 @@
           <h2>
             We evaluate the MaPO checkpoint adapted on Pick-a-Pic v2 for general human preference alignment in the Imgsys public benchmark.
             MaPO was able to outperform or match 21 out of 25 state-of-the-art text-to-image diffusion models by ranking 7th on the leaderboard at the time of writing, compared to Diffusion-DPO’s 20th place, while also consuming 14.5% less wall-clock training time on adapting Pick-a-Pic v2.
+            We appreciate the <a href="https://imgsys.org/" target="_blank">imgsys</a> team for helping us get the human preference data.
           </h2>
           <br><div align="center"><img src="static/images/imgsys.png" alt="pick style figure" width="875"/></div>
       </div>
@@ -325,7 +313,7 @@
           <div class="content">
 
             <p>
-              This page was built using <a href="https://spright-t2i.github.io/" target="_blank">SPRIGHT T2I Project Page</a> which was adopted from the  <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+              This page was built using the <a href="https://spright-t2i.github.io/" target="_blank">SPRIGHT T2I Project Page</a> which was adopted from the  <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
               You are free to borrow this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
               Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
